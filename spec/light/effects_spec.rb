@@ -21,4 +21,12 @@ describe Light::Effects do
       light_effects.green
     end
   end
+
+  describe "#black" do
+    it "turns the light 'black', not actually turning it off" do
+      black_color = LIFX::Color.new(0,0,0,3500)
+      expect(light).to receive(:set_color).with(black_color)
+      light_effects.black
+    end
+  end
 end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Light::ClientConfiguration do
+describe Light::Client do
   let(:context) { double('context').as_null_object }
 
   let(:unknown_light) do
@@ -24,11 +24,11 @@ describe Light::ClientConfiguration do
 
   describe ".light" do
     it "returns a light with a label name" do
-      expect(described_class.light('groovy room')).to eq groovy_light
+      expect(described_class.find 'groovy room').to eq groovy_light
     end
 
     it "returns the first light available if no label is provided" do
-      expect(described_class.light).to eq unknown_light
+      expect(described_class.find).to eq unknown_light
     end
   end
 end

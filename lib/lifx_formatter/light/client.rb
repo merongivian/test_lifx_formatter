@@ -1,7 +1,7 @@
 module Light
-  class ClientConfiguration
+  class Client
     class << self
-      def light(label = nil)
+      def find(label = nil)
         light_with_label(label) || any_light
       end
 
@@ -13,8 +13,10 @@ module Light
       end
 
       def any_light
-        all_lights = client.lights
-        @any_light ||= all_lights.first
+        @any_light ||= begin
+          all_lights = client.lights
+          all_lights.first
+        end
       end
 
       def client
