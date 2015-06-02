@@ -1,5 +1,5 @@
 module RSpec
-  class Formatter
+  class LifxFormatter
     Core::Formatters.register(
       self,
       :start,

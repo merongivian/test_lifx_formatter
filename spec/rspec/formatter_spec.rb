@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module RSpec
-  RSpec.describe Formatter do
+  RSpec.describe LifxFormatter do
     let(:light_effects) { instance_double('Light::Effects') }
     let(:formatter) { described_class.new(StringIO.new) }
     let(:notification) { double('notification') }
