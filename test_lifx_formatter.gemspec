@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{run your specs with the lifx bulb}
   spec.description   = %q{rspec formatter with the lifx bulb}
-  spec.homepage      = "www.github.com/merongivian/test_lifx_formatter"
+  spec.homepage      = "http://github.com/merongivian/test_lifx_formatter"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
